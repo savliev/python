@@ -1,0 +1,90 @@
+# 1. Создать список и заполнить его элементами различных типов данных. Реализовать скрипт
+# проверки типа данных каждого элемента. Использовать функцию type() для проверки типа.
+# Элементы списка можно не запрашивать у пользователя, а указать явно, в программе.
+
+# list = [12, "hello", True, 1.5, None]
+# for element in range(len(list)):
+#     print (type(list[element]))
+
+# 2. Для списка реализовать обмен значений соседних элементов, т.е. Значениями обмениваются
+# элементы с индексами 0 и 1, 2 и 3 и т.д. При нечетном количестве элементов последний
+# сохранить на своем месте. Для заполнения списка элементов необходимо использовать функцию input().
+
+# list = []
+# number = int(input("Введите количество элементов списка "))
+#
+# i = 0
+# while i < number:
+#     list.append(input("Введите значение списка "))
+#     i += 1
+#
+# index = 0
+# for element in range(len(list) // 2):
+#     list[index], list[index + 1] = list[index + 1], list[index]
+#     index += 2
+# print(list)
+
+# 3. Пользователь вводит месяц в виде целого числа от 1 до 12. Сообщить к какому времени года
+# относится месяц (зима, весна, лето, осень). Напишите решения через list и через dict.
+
+# ---------------------- через список --------------------------
+# seasons = ["Зима", "Весна", "Лето", "Осень"]
+# number = int(input("Введите номер месяца "))
+# if number ==1 or number == 12 or number == 2:
+#         print(seasons[0])
+# elif number == 3 or number == 4 or number ==5:
+#     print(seasons[1])
+# elif number == 6 or number == 7 or number == 8:
+#     print(seasons[2])
+# elif number == 9 or number == 10 or number == 11:
+#     print(seasons[3])
+# else:
+#         print("Такого номера месяца не бывает")
+# ------------------------- через словарь  --------------------
+# seasons = {1: "Зима", 2: "Весна", 3: "Лето", 4: "Осень"}
+# number = int(input("Введите номер месяца "))
+# if number == 1 or number == 12 or number == 2:
+#     print(seasons.get(1))
+# elif number == 3 or number == 4 or number == 5:
+#     print(seasons.get(2))
+# elif number == 6 or number == 7 or number == 8:
+#     print(seasons.get(3))
+# elif number == 9 or number == 10 or number == 11:
+#     print(seasons.get(4))
+# else:
+#     print("Такого номера месяца не бывает")
+
+# 4. Пользователь вводит строку из нескольких слов, разделённых пробелами. Вывести каждое слово с
+# новой строки. Строки необходимо пронумеровать. Если слово длинное, выводить только первые 10 буквв слове.
+# string = input("введите строку ")
+# words = []
+# num = 1
+# for word in range(string.count(' ') + 1):
+#     words = string.split()
+#     if len(str(words)) <= 10:
+#         print(f" {num} {words [word]}")
+#         num += 1
+#     else:
+#         print(f" {num} {words [word] [0:10]}")
+#         num += 1
+
+# 5. Реализовать структуру «Рейтинг», представляющую собой не возрастающий набор натуральных чисел.
+# У пользователя необходимо запрашивать новый элемент рейтинга. Если в рейтинге существуют элементы с
+# одинаковыми значениями, то новый элемент с тем же значением должен разместиться после них.
+#
+# list = [12, 7, 5, 3, 2]
+# number = int(input("Введите значение для рейтинга "))
+# count = list.count(number)
+# for element in list:
+#     if count > 0:
+#         position = list.index(number)
+#         list.insert(position+count, number)
+#         break
+#     else:
+#         if number > element:
+#             insert_position = list.index(element)
+#             list.insert(insert_position, number)
+#             break
+#         elif number < list[len(list) - 1]:
+#             list.append(number)
+# print(list)
